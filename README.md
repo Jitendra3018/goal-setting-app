@@ -1,6 +1,4 @@
-# MERN Stack Tutorial
-
-<h1>Goal Completion App</h1>
+# MERN Stack Tutorial - Goal Completion App
 
 <p>Just made this app using the following technologies -></p>
 

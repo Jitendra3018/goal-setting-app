@@ -48,6 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 	// res.json({ message: "Registering user" });
 });
+
 // @desc	Authenticate User
 // @route	POST /api/users/login
 // @access	Public
@@ -72,9 +73,10 @@ const loginUser = asyncHandler(async (req, res) => {
 
 	// res.json({ message: "Logging user" });
 });
+
 // @desc	Get User data
 // @route	GET /api/user/me
-// @access	Public
+// @access	Private
 const getMe = asyncHandler(async (req, res) => {
 	res.json({ message: "Displaying user's information" });
 });

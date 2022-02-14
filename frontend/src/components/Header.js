@@ -10,7 +10,7 @@ export default function Header() {
 			<ul>
 				<li>
 					<Link to="/login">
-						<FaSignInAlt />
+						<FaSignInAlt /> Login
 					</Link>
 				</li>
 				<li>

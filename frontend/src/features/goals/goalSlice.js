@@ -34,6 +34,25 @@ export const goalSlice = createSlice({
 	reducers: {
 		reset: (state) => initialState,
 	},
+	extraReducers: (builder) => {
+		builder
+			.addCase(createGoal.pending, (state) => {
+				state.isLoading = true;
+				// state.isSuccess = false;
+				// state.isError = false;
+				// state.message = "";
+			})
+			.addCase(createGoal.fulfilled, (state, action) => {
+				state.isLoading = false;
+				state.isSuccess = true;
+				state.goals.push(action.payload);
+			})
+			.addCase(createGoal.rejected, (state, action) => {
+				state.isLoading = false;
+				state.isError = true;
+				state.message = action.payload;
+			});
+	},
 });
 
 export const { reset } = goalSlice.actions;
